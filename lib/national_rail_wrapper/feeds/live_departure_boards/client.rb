@@ -3,14 +3,6 @@ module NationalRailWrapper
     module LiveDepartureBoards
       class  Client < NationalRailWrapper::Client
 
-        def service_details(rid)
-          body = {rid: rid}
-          HistoricalServicePerformance::Requests::ServiceDetails.new.run(auth_token: auth_token, body: body)
-        end
-
-        def service_metrics(body)
-          HistoricalServicePerformance::Requests::ServiceMetrics.new.run(auth_token: auth_token, body: body)
-        end
 
         private
 

@@ -1,7 +1,6 @@
 module NationalRailWrapper
   module Feeds::BaseFeed::Requests
     class Base
-
       def call(options = {})
         method          = options.fetch(:method, :get)
         path            = options.fetch(:path, '')
@@ -27,3 +26,4 @@ module NationalRailWrapper
     end
   end
 end
+
