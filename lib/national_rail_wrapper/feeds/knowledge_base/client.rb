@@ -2,47 +2,47 @@ module NationalRailWrapper
   module Feeds
     module KnowledgeBase
       class Client < NationalRailWrapper::Client
-        
-        def incidents
+
+        def incidents(parse_result: true)
           request = KnowledgeBase::Requests::Incidents.new.run(auth_token)
 
-          # Ox.parse(request.response_body).to_json  
+          parse_result ? Ox.parse(request.response_body).to_json : request.response_body 
         end
 
-        def national_service_indicators
+        def national_service_indicators(parse_result: true)
           request = KnowledgeBase::Requests::NationalServiceIndicators.new.run(auth_token)
 
-          # Ox.parse(request.response_body).to_json  
+          parse_result ? Ox.parse(request.response_body).to_json : request.response_body 
         end
 
-        def public_promotions
+        def public_promotions(parse_result: true)
           request = KnowledgeBase::Requests::PublicPromotions.new.run(auth_token)
 
-          # Ox.parse(request.response_body).to_json  
+          parse_result ? Ox.parse(request.response_body).to_json : request.response_body 
         end
 
-        def stations
+        def stations(parse_result: true)
           request = KnowledgeBase::Requests::Stations.new.run(auth_token) 
 
-          # Ox.parse(request.response_body).to_json  
+          parse_result ? Ox.parse(request.response_body).to_json : request.response_body 
         end
 
-        def ticket_restrictions
+        def ticket_restrictions(parse_result: true)
           request = KnowledgeBase::Requests::TicketRestrictions.new.run(auth_token) 
 
-          # Ox.parse(request.response_body).to_json  
+          parse_result ? Ox.parse(request.response_body).to_json : request.response_body 
         end
 
-        def ticket_types
+        def ticket_types(parse_result: true)
           request = KnowledgeBase::Requests::TicketTypes.new.run(auth_token)
           
-          # Ox.parse(request.response_body).to_json  
+          parse_result ? Ox.parse(request.response_body).to_json : request.response_body 
         end
 
-        def tocs
+        def tocs(parse_result: true)
           request = KnowledgeBase::Requests::Tocs.new.run(auth_token)
 
-          # Ox.parse(request.response_body).to_json  
+          parse_result ? Ox.parse(request.response_body).to_json : request.response_body 
         end
 
         private

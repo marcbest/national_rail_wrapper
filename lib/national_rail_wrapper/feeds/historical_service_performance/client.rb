@@ -3,12 +3,12 @@ module NationalRailWrapper
     module HistoricalServicePerformance
       class Client < NationalRailWrapper::Client
 
-        def service_details(rid)
+        def service_details(rid, parse_result: false)
           body = {rid: rid}
           HistoricalServicePerformance::Requests::ServiceDetails.new.run(auth_token: auth_token, body: body)
         end
 
-        def service_metrics(body)
+        def service_metrics(body, parse_result: false)
           HistoricalServicePerformance::Requests::ServiceMetrics.new.run(auth_token: auth_token, body: body)
         end
 
