@@ -4,6 +4,8 @@ require 'ox'
 require "national_rail_wrapper/version"
 require "national_rail_wrapper/client"
 
+require_relative "national_rail_wrapper/feeds/base_feed/requests/base"
+
 require_relative "national_rail_wrapper/feeds/knowledge_base/client"
 require_relative "national_rail_wrapper/feeds/knowledge_base/requests/base"
 require_relative "national_rail_wrapper/feeds/knowledge_base/requests/incidents"
