@@ -28,36 +28,46 @@ Or install it yourself as:
 client = NationalRailWrapper::Feeds::Client.new(username: username, password: password)
 
 ### Knowledge Base 
-```client = NationalRailWrapper::Feeds::KnowledgeBase::Client.new(username: USER_NAME, password: PASSWORD)
+```
+client = NationalRailWrapper::Feeds::KnowledgeBase::Client.new(username: USER_NAME, password: PASSWORD)
 ```
 #### Incidents 
-```client.incidents
+```
+client.incidents
 ```
 #### National Service Indicators 
-```client.national_service_indicators
+```
+client.national_service_indicators
 ```
 #### Public Promotions 
-```client.public_promotions
+```
+client.public_promotions
 ```
 #### Stations 
-```client.stations
+```
+client.stations
 ```
 #### Ticket Restrictions 
-```client.ticket_restrictions
+```
+client.ticket_restrictions
 ```
 #### Ticket Types 
-```client.ticket_types
+```
+client.ticket_types
 ```
 #### TOC's 
-```client.tocs
+```
+client.tocs
 ```
 
 ### Historical Service Performance
-```client = NationalRailWrapper::Feeds::HistoricalServicePerformance::Client.new(username: USER_NAME, password: PASSWORD)
+```
+client = NationalRailWrapper::Feeds::HistoricalServicePerformance::Client.new(username: USER_NAME, password: PASSWORD)
 ```
 
 #### ServiceMetrics 
-```params = {
+```
+params = {
     from_loc: 'HML',
     to_loc: 'EUS',
     from_time: '0800',
@@ -70,7 +80,8 @@ client = NationalRailWrapper::Feeds::Client.new(username: username, password: pa
 client.service_metrics(params)
 ```
 #### ServiceDetails 
-```rid = '201607294212242'
+```
+rid = '201607294212242'
 client.service_details(rid)
 ```
 
