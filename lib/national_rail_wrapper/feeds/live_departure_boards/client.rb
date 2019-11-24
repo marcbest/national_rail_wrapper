@@ -3,7 +3,6 @@ module NationalRailWrapper
     module LiveDepartureBoards
       class  Client < NationalRailWrapper::Client
 
-
         private
 
         def auth_token
