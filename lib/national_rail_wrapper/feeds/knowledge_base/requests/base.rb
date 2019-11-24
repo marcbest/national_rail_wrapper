@@ -1,8 +1,8 @@
 module NationalRailWrapper
   module Feeds::KnowledgeBase::Requests
-    class Base < Feeds::BaseFeed::Requests::Base
+    class Base < Feeds::Base::Requests::Base
 
-      def request_params
+      def request_params(method, body, query, auth_token)
         {
           method: method,
           body: body.empty? ? '' : body.to_json,

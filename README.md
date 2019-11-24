@@ -30,10 +30,28 @@ client = NationalRailWrapper::Feeds::Client.new(username: username, password: pa
 ### Knowledge Base 
 ```client = NationalRailWrapper::Feeds::KnowledgeBase::Client.new(username: USER_NAME, password: PASSWORD)
 ```
-
+#### Incidents 
+```client.incidents
+```
+#### National Service Indicators 
+```client.national_service_indicators
+```
+#### Public Promotions 
+```client.public_promotions
+```
 #### Stations 
 ```client.stations
 ```
+#### Ticket Restrictions 
+```client.ticket_restrictions
+```
+#### Ticket Types 
+```client.ticket_types
+```
+#### TOC's 
+```client.tocs
+```
+
 ### Historical Service Performance
 ```client = NationalRailWrapper::Feeds::HistoricalServicePerformance::Client.new(username: USER_NAME, password: PASSWORD)
 ```
