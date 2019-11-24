@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A wrapper for the National Rail open data API}
   spec.description   = %q{A wrapper around the National Rail open data API. Including Darwin and Knowledge base}
-  spec.homepage      = "https://github.com/marcbest/national_rails_wrapper"
+  spec.homepage      = "https://github.com/marcbest/national_rail_wrapper"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
