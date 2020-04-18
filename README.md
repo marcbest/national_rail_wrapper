@@ -25,7 +25,6 @@ Or install it yourself as:
     $ gem install national_rail_wrapper
 
 ## Usage
-client = NationalRailWrapper::Feeds::Client.new(username: username, password: password)
 
 ### Knowledge Base 
 ```
