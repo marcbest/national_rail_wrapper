@@ -1,7 +1,7 @@
 module NationalRailWrapper
   class Client
 
-    def initialize(username: username, password: password)
+    def initialize(username:, password:)
       @credentials = {username: username, password: password}
     end
 
