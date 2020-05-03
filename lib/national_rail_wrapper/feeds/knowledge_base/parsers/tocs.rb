@@ -11,21 +11,17 @@ module NationalRailWrapper
             options = Nokogiri::XML::ParseOptions.new.nonet.noent.noblanks.huge
             doc = Nokogiri::XML.parse(@data, nil, nil, options)
 
-            doc.xpath('/xmlns:StationList/xmlns:Station').map do |toc_node|
+            doc.xpath('/xmlns:TrainOperatingCompanyList/xmlns:TrainOperatingCompany').map do |toc_node|
               {
-                name: toc_node.xpath('./xmlns:Name')&.text,
-                crs_code: toc_node.css('CrsCode')&.text,
-                alternative_identifiers: toc_node.css('AlternativeIdentifiers')&.text,
-                sixteen_character_name: toc_node.css('SixteenCharacterName')&.text,
-                longitude: toc_node.css('Longitude')&.text,
-                latitude: toc_node.css('Latitude')&.text,
-                station_operator: toc_node.css('StationOperator')&.text,
-                staffing_level: toc_node.css('Staffing/StaffingLevel')&.text,
-                closed_circuit_television: toc_node.css('Staffing/ClosedCircuitTelevision')&.text,
-                station_facilities: station_facilities(toc_node.css('StationFacilities')),
-                # impaired_access: impaired_access(toc_node.css('ImpairedAccess'))
-                car_park: car_park(toc_node.css('CarPark'))
-
+                name: toc_node.css('Name')&.text,
+                atoc_code: toc_node.css('AtocCode')&.text,
+                atoc_member: toc_node.css('AtocMember')&.text,
+                legal_name: toc_node.css('LegalName')&.text,
+                station_operator: toc_node.css('LegalName')&.text,
+                managing_director: toc_node.css('ManagingDirector')&.text, 
+                logo: toc_node.css('Logo')&.text,
+                network_map: toc_node.css('NetworkMap')&.text,
+                company_website: toc_node.css('CompanyWebsite')&.text
               }
             end
           end
